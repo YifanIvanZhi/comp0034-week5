@@ -1,22 +1,15 @@
-> This activity has not yet been written! Do not use.
-
 # Optional activities
 
-None of the following are needed for coursework 1, however depending on your design you may wish/need to use one or more of them.
+These are entirely optional but may be useful if you have a design that makes use of them.
 
 1. Plotly Go
-2. Multipage Dash apps (this activity is in week 3)
-3. Adding a ML model to Dash
+2. [Multipage Dash apps (in the week 3 repository)](https://github.com/nicholsons/comp0034-week3/blob/main/activities/multi_page_dash_app.md)
 
 ## Plotly Go
 
 ### Overview of `plotly.graph_objects`
 
-You may need to change features of a visualisation that are not exposed in Express, in which case you would need to use
-Plotly.py graph objects instead. The following is a brief overview of using graph objects.
-
-For most, Express will be sufficient for the coursework, so you may skip this activity if you find it confusing to learn
-too many ways to create charts.
+You may need to change features of a visualisation that are not exposed in Express, in which case you would need to use Plotly.py graph objects instead. The following is a brief overview of using graph objects.
 
 There are 3 main concepts in Plotly’s philosophy:
 
@@ -26,14 +19,11 @@ There are 3 main concepts in Plotly’s philosophy:
 
 ### Data
 
-The Data object defines what we want to display in the chart (that is, the data). We define a collection of data and the
-specifications to display them as a trace. A Data object can have many traces. Think of a line chart with two lines
-representing two different categories: each line is a trace.
+The Data object defines what we want to display in the chart (that is, the data). We define a collection of data and the specifications to display them as a trace. A Data object can have many traces. Think of a line chart with two lines representing two different categories: each line is a trace.
 
 ### Layout
 
-The Layout object defines features that are not related to data (like title, axis titles, and so on). We can also use
-the Layout to add annotations and shapes to the chart.
+The Layout object defines features that are not related to data (like title, axis titles, and so on). We can also use the Layout to add annotations and shapes to the chart.
 
 ### Figure
 
@@ -68,10 +58,15 @@ fig.update_layout(
 fig.show()
 ```
 
-The code in [/examples/go.py](/examples/go.py) creates the above plot using code
+The code in [/src/sunburst.py](/src/sunburst.py) creates the above plot using code
 from [Plotly.](https://plotly.com/python/sunburst-charts/#controlling-text-orientation-inside-sunburst-sectors)
+
+There are [Go activities in week 2](https://github.com/nicholsons/comp0034-week2/blob/main/activities/lollapalooza.md#adding-plotly-go-charts-to-the-lollapalooza-dashboard) that can be added to the Lollapalooza dashboard.
 
 ### Further information
 
-Please refer to the [Plotly Graph Objects documentation](https://plotly.com/python/graph-objects/).
-[Examples](https://plotly.com/python/) for creating many different chart types in Plotly Express and Plotly Go.
+- [Plotly Graph Objects documentation](https://plotly.com/python/graph-objects/).
+
+- [Examples](https://plotly.com/python/) for creating many different chart types in Plotly Express and Plotly Go.
+
+- [Article with examples of lots of charts and different styling techniques](https://towardsdatascience.com/visualization-with-plotly-express-comprehensive-guide-eb5ee4b50b57) and the [code in GitHub](https://github.com/vaclavdekanovsky/data-analysis-in-examples/blob/master/Vizualizations/Plotly/Comperhansive%20Guide/Plotly%20Express%20-%20Comprehensive%20Guide.ipynb)
