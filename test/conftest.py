@@ -1,7 +1,7 @@
 from selenium.webdriver.chrome.options import Options
 
 
-def pytest_setup_options():
+def chrome_driver_options():
     """Setup options for the Chromedriver when using Selenium"""
     options = Options()
     # Uncomment the following if testing on GitHub actions
