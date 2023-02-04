@@ -9,7 +9,7 @@ def test_papa001_h1textequals(dash_duo):
     """
     GIVEN the app is running
     WHEN the home page is available
-    THEN the H1 heading element should include the text 'Paralympic History'
+    THEN the H1 heading element should include the text 'Paralympic History' (case insensitive)
     """
     app = import_app(app_file="paralympics_app.paralympics_dash_app")
     dash_duo.start_server(app)
