@@ -9,13 +9,14 @@ def test_papa001_h1textequals(dash_duo):
     """
     GIVEN the app is running
     WHEN the home page is available
-    THEN the H1 heading element should include the text 'Paralympic History' (case insensitive)
+    THEN the H1 heading element shouldp include the text 'Paralympic History' (case insensitive)
     """
     app = import_app(app_file="paralympics_app.paralympics_dash_app")
     dash_duo.start_server(app)
+    # dash_duo.driver.maximize_window()
     dash_duo.wait_for_element("h1", timeout=4)
     h1_text = dash_duo.find_element("h1").text
-    dash_duo.driver.implicitly_wait(3)
+    dash_duo.driver.implicitly_wait(1)
     assert h1_text.casefold() == "Paralympic History".casefold()
 
 
@@ -31,7 +32,7 @@ def test_papa002_dropdown_changes_chart(dash_duo):
     dropdown_input = dash_duo.find_element("#type-dropdown input")
     dropdown_input.send_keys("Athletes")
     dropdown_input.send_keys(Keys.RETURN)
-    dash_duo.driver.implicitly_wait(5)
+    dash_duo.driver.implicitly_wait(2)
     graph_title = dash_duo.find_element(
         "#line-chart-time > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(3) > g:nth-child("
         "4) > g:nth-child(2) > text:nth-child(1)"
