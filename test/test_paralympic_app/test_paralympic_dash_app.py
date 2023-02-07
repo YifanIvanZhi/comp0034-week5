@@ -16,7 +16,6 @@ def test_papa001_h1textequals(dash_duo):
     # dash_duo.driver.maximize_window()
     dash_duo.wait_for_element("h1", timeout=4)
     h1_text = dash_duo.find_element("h1").text
-    dash_duo.driver.implicitly_wait(1)
     assert h1_text.casefold() == "Paralympic History".casefold()
 
 
@@ -32,9 +31,9 @@ def test_papa002_dropdown_changes_chart(dash_duo):
     dropdown_input = dash_duo.find_element("#type-dropdown input")
     dropdown_input.send_keys("Athletes")
     dropdown_input.send_keys(Keys.RETURN)
-    dash_duo.driver.implicitly_wait(2)
+    dash_duo.wait_for_element("#line-sports", timeout=None)
     graph_title = dash_duo.find_element(
-        "#line-chart-time > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(3) > g:nth-child("
+        "#line-sports > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > svg:nth-child(3) > g:nth-child("
         "4) > g:nth-child(2) > text:nth-child(1)"
     )
     assert (

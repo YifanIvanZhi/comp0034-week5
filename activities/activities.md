@@ -3,7 +3,7 @@
 These are entirely optional but may be useful if you have a design that makes use of them.
 
 1. Plotly Go
-2. [Multipage Dash apps (in the week 3 repository)](https://github.com/nicholsons/comp0034-week3/blob/main/activities/multi_page_dash_app.md)
+2. [For Multipage Dash apps please refer to the Dash documentation directly](https://dash.plotly.com/urls)
 
 ## Plotly Go
 
